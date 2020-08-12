@@ -109,13 +109,13 @@ export default function Nav() {
   return (
     <Container>
       <div className="logo  hvr-wobble-horizontal">
-        <NavLink to="/">Support</NavLink>
+        <NavLink to="/">Home</NavLink>
       </div>
       <div className="supportTeam  hvr-wobble-horizontal">
-        <NavLink to="/support-team">SupportTeam</NavLink>
+        <NavLink to="/players">Players</NavLink>
       </div>
       <div className="supportTeam  hvr-wobble-horizontal">
-        <NavLink to="/add-agent">Add Agent</NavLink>
+        <NavLink to="/add-player">Add Players</NavLink>
       </div>
     </Container>
   );

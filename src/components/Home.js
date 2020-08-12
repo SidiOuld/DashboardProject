@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import ManagerOne from "./ManagerOne";
-import ManagerTwo from "./ManagerTwo";
+import MyProfile from "./MyProfile";
 
 const Container = styled.div`
-  margin: 50px auto 5px auto;
+  // margin: 50px auto 5px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -16,8 +15,7 @@ const Container = styled.div`
 function Home() {
   return (
     <Container>
-      <ManagerOne />
-      <ManagerTwo />
+      <MyProfile />
     </Container>
   );
 }
