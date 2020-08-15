@@ -5,6 +5,9 @@ import styled from "styled-components";
 import axiosWithAuth from "../components/util/axiosWithAuth";
 
 const FormContainer = styled.div`
+  height: 70vh;
+  margin-top: 30px;
+
   .formLogo {
     padding: 40px 10px;
     background: rgb(250, 170, 91);

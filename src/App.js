@@ -14,6 +14,7 @@ import UpdateAgentForm from "./components/UpdateAgentForm";
 //Private route and Context
 import PrivateRoute from "./components/PrivateRoute";
 import { AgentContext, AgentProvider } from "./Context/AgentsContext";
+import FindMyTeam from "./components/FindMyTeam";
 
 export default function App() {
   return (
@@ -37,6 +38,7 @@ export default function App() {
           <PrivateRoute exact path="/add-player" component={AddPlayer} />
         </AgentProvider>
         <Route exact path="/login" component={LoginPage} />
+        <Route exact path="/find-my-team" component={FindMyTeam} />
         <PrivateRoute exact path="/" component={Home} />
       </div>
       <Footer />

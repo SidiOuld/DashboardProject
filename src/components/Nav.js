@@ -115,6 +115,9 @@ export default function Nav() {
         <NavLink to="/players">Players</NavLink>
       </div>
       <div className="supportTeam  hvr-wobble-horizontal">
+        <NavLink to="/find-my-team">Find My Team</NavLink>
+      </div>
+      <div className="supportTeam  hvr-wobble-horizontal">
         <NavLink to="/add-player">Add Players</NavLink>
       </div>
     </Container>
