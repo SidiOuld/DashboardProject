@@ -1,4 +1,7 @@
 import React from "react";
+import { IoMdPersonAdd } from "react-icons/io";
+import { MdEmail } from "react-icons/md";
+import { FaCheckCircle } from "react-icons/fa";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -25,6 +28,12 @@ const Container = styled.div`
     }
     margin-bottom: 10px;
     /* background-color: pink; */
+    form input {
+      min-width: 300px;
+    }
+    form button {
+      min-width: 100px;
+    }
   }
   .how-invitation-works {
     h1 {
@@ -35,6 +44,17 @@ const Container = styled.div`
     p {
       font-family: "Open Sans", Helvetica, Arial, sans-serif;
       color: #6f7f9b;
+    }
+    .icon {
+      font-size: 50px;
+    }
+
+    .box2__container2 {
+      display: flex;
+      flex-wrap: wrap;
+      .box2__container2--box {
+        width: 150px;
+      }
     }
   }
 `;
@@ -63,17 +83,17 @@ function FindMyTeam() {
       <div className="box2">
         <div className="how-invitation-works">
           <h1>How Do Team Invitations Work?</h1>
-          <div>
-            <div>
-              <>Icon1</>
+          <div className="box2__container2">
+            <div className="box2__container2--box">
+              <IoMdPersonAdd className="icon" />
               <p>Your Coach or teammate adds you to a team</p>
             </div>
-            <div>
-              <>Icon1</>
+            <div className="box2__container2--box">
+              <MdEmail className="icon" />
               <p>You receive an invitation via email to join the team</p>
             </div>
-            <div>
-              <>Icon1</>
+            <div className="box2__container2--box">
+              <FaCheckCircle className="icon" />
               <p>You click a link in the email to accept and join</p>
             </div>
           </div>
