@@ -5,7 +5,9 @@ import { FaCheckCircle } from "react-icons/fa";
 import styled from "styled-components";
 
 const Container = styled.div`
-  margin: 20px 0;
+  padding: 20px 0;
+  height: 80vh;
+  background-color: #a4a71e;
   .box1,
   .box2 {
     border-radius: 5px;

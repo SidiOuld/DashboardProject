@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axiosWithAuth from "./util/axiosWithAuth";
-import Data from "../data";
+// import Data from "../data";
 import styled from "styled-components";
 import { AgentContext } from "../Context/AgentsContext";
 

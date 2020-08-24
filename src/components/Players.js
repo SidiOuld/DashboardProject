@@ -6,15 +6,18 @@ import { AgentContext } from "../Context/AgentsContext";
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  margin: 25px auto;
+  // width: 90%;
+  height: 80vh;
+  background-color: #a4a71e;
+  margin: auto;
+  padding: 25px;
   .teamCard {
     border-radius: 15px;
     width: 204px;
-    margin: 5px auto;
+    margin: 5px 10px;
     margin-bottom: 25px;
     background: white;
-    box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
+    // box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
     p {
       margin: 10px;
     }
@@ -25,6 +28,10 @@ const Container = styled.div`
       border-radius: 15px;
       object-fit: cover;
     }
+  }
+  @media only screen and (max-width: 930px) {
+    // margin-top: 40px;
+    height: 600px;
   }
 `;
 

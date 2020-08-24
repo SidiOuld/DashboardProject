@@ -4,20 +4,23 @@ import ViewTeamBtn from "./ViewTeamBtn";
 
 const Container = styled.div`
   border-radius: 15px;
-  margin: 70px 15px;
+  // margin: 70px 15px;
   width: 300px;
   background: white;
-  box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
+  // box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
   .managerImg {
     width: 100%;
     padding: 10px;
     border-radius: 15px;
     object-fit: cover;
   }
+  @media only screen and (max-width: 930px) {
+    margin-bottom: 5px;
+  }
 `;
 
 const OuterContainer = styled.div`
-  height: 80vh;
+  // height: 80vh;
 `;
 
 export default function MyProfile() {
