@@ -1,24 +1,29 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import axiosWithAuth from "../components/util/axiosWithAuth";
 
 const FormContainer = styled.div`
-  height: 70vh;
-  margin-top: 30px;
-
+  padding-top: 50px;
+  height: 80vh;
+  background-color: #a4a71e;
+  .formContainer {
+    border: 2px solid black;
+    width: 23rem;
+    background: white;
+  }
   .formLogo {
     padding: 40px 10px;
-    background: rgb(250, 170, 91);
-    width: 23rem;
+    // background: rgb(250, 170, 91);
+    background: gray;
+    width: 22.78rem;
     margin: auto;
     color: rgb(120, 200, 133);
   }
   form {
+    // border: 2px solid black;
     margin: auto;
     padding: 20px 10px;
-    background: white;
+    // background: white;
     text-align: left;
     width: 23rem;
     color: rgb(145, 143, 143);
@@ -87,46 +92,48 @@ function LoginInForm(props) {
   }
 
   return (
-    <FormContainer className="formContainer">
-      <div className="formLogo">
-        <h2>Sign In Form </h2>
-      </div>
-      <form className="form" onSubmit={handleSubmit} noValidate>
-        <div>
-          <label>
-            {" "}
-            Email address
-            <br />
-            <input
-              name="username"
-              type="text"
-              placeholder="the usernam is a"
-              value={values.username}
-              onChange={handleChange}
-            />
-            <hr />
-          </label>
+    <FormContainer>
+      <div className="formContainer">
+        <div className="formLogo">
+          <h2>Sign In Form </h2>
         </div>
+        <form className="form" onSubmit={handleSubmit} noValidate>
+          <div>
+            <label>
+              {" "}
+              Email address
+              <br />
+              <input
+                name="username"
+                type="text"
+                placeholder="the usernam is a"
+                value={values.username}
+                onChange={handleChange}
+              />
+              <hr />
+            </label>
+          </div>
 
-        <br />
-        <div>
-          <label>
-            Password
-            <br />
-            <input
-              name="password"
-              type="password"
-              placeholder="the password is b"
-              value={values.password}
-              onChange={handleChange}
-            />
-            <hr />
-          </label>
-          <p>Forgot your password?</p>
-          {/* <LoginBtn/> */}
-        </div>
-        <button type="submit">Sign in</button>
-      </form>
+          <br />
+          <div>
+            <label>
+              Password
+              <br />
+              <input
+                name="password"
+                type="password"
+                placeholder="the password is b"
+                value={values.password}
+                onChange={handleChange}
+              />
+              <hr />
+            </label>
+            <p>Forgot your password?</p>
+            {/* <LoginBtn/> */}
+          </div>
+          <button type="submit">Sign in</button>
+        </form>
+      </div>
     </FormContainer>
   );
 }

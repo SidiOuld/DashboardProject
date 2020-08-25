@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { AgentContext } from "../Context/AgentsContext";
@@ -6,8 +6,7 @@ import { AgentContext } from "../Context/AgentsContext";
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  // width: 90%;
-  height: 80vh;
+  min-height: 80vh;
   background-color: #a4a71e;
   margin: auto;
   padding: 25px;
@@ -17,7 +16,7 @@ const Container = styled.div`
     margin: 5px 10px;
     margin-bottom: 25px;
     background: white;
-    // box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
+
     p {
       margin: 10px;
     }
@@ -30,8 +29,7 @@ const Container = styled.div`
     }
   }
   @media only screen and (max-width: 930px) {
-    // margin-top: 40px;
-    height: 600px;
+    height: 100%;
   }
 `;
 

@@ -4,16 +4,25 @@ import axiosWithAuth from "./util/axiosWithAuth";
 // import Data from "../data";
 import styled from "styled-components";
 import { AgentContext } from "../Context/AgentsContext";
+import { Container } from "semantic-ui-react";
 
-const PlayerCardContainer = styled.div`
+const ContainerBox = styled.div`
+  padding-top: 50px;
+  height: 80vh;
+  background-color: #a4a71e;
+`;
+
+const PlayerCardBox = styled.div`
   display: flex;
+  border-radius: 5px;
   width: 50%;
   min-height: 300px;
-  margin: 25px auto;
+  // margin: 25px auto;
+  padding: 
   /* border: 2px solid black; */
   border-radius: 15px;
   background-color: white;
-  box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
+  // box-shadow: 8px 8px 4px #ccac08, -8px -8px 4px #eec006;
 
   @media only screen and (max-width: 1078px) {
     flex-wrap: wrap;
@@ -84,27 +93,31 @@ function PlayerCard(props) {
   };
 
   return (
-    <PlayerCardContainer key={values.id}>
-      <div className="userCard__Container">
-        <img
-          src={`https://www.wellandgood.com/wp-content/uploads/2019/07/GettyImages-1159767394.jpg`}
-          alt="agent profile"
-          height="200"
-          className="userCard__Img"
-        />
-      </div>
-      <div className="userCard__contactInfo">
-        <p>Name: {values.name}</p>
-        <p>Title: {values.email}</p>
-      </div>
-      <div className="userCard__xBtn">
-        <NavLink to="/players">X</NavLink>
-      </div>
-      <button onClick={() => props.history.push(`/update-player/${values.id}`)}>
-        Edit Item
-      </button>
-      <button onClick={deleteAgent}>Delete</button>
-    </PlayerCardContainer>
+    <ContainerBox>
+      <PlayerCardBox key={values.id}>
+        <div className="userCard__Container">
+          <img
+            src={`https://www.wellandgood.com/wp-content/uploads/2019/07/GettyImages-1159767394.jpg`}
+            alt="agent profile"
+            height="200"
+            className="userCard__Img"
+          />
+        </div>
+        <div className="userCard__contactInfo">
+          <p>Name: {values.name}</p>
+          <p>Title: {values.email}</p>
+        </div>
+        <div className="userCard__xBtn">
+          <NavLink to="/players">X</NavLink>
+        </div>
+        <button
+          onClick={() => props.history.push(`/update-player/${values.id}`)}
+        >
+          Edit Item
+        </button>
+        <button onClick={deleteAgent}>Delete</button>
+      </PlayerCardBox>
+    </ContainerBox>
   );
 }
 

@@ -57,9 +57,14 @@ import { AgentContext, AgentProvider } from "../Context/AgentsContext";
 // `;
 
 const FormContainer = styled.div`
-  border: 2px solid black;
-  margin: 70px auto;
-  width: 23rem;
+  padding-top: 50px;
+  height: 80vh;
+  background-color: #a4a71e;
+  .formContainer {
+    border: 2px solid black;
+    width: 23rem;
+    background: white;
+  }
   .formLogo {
     padding: 40px 10px;
     // background: rgb(250, 170, 91);
@@ -155,8 +160,8 @@ function UpdateAgentForm(props) {
   }
 
   return (
-    <OuterContainer>
-      <FormContainer className="formContainer">
+    <FormContainer>
+      <div className="formContainer">
         <div className="formLogo">
           <h2>Update Agent</h2>
         </div>
@@ -205,8 +210,8 @@ function UpdateAgentForm(props) {
           </div>
           <button type="submit">Save Changes</button>
         </form>
-      </FormContainer>
-    </OuterContainer>
+      </div>
+    </FormContainer>
   );
 }
 

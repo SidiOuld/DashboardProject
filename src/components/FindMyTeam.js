@@ -59,6 +59,9 @@ const Container = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 1010px) {
+    height: 100%;
+  }
 `;
 
 function FindMyTeam() {

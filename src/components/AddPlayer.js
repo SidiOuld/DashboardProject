@@ -1,26 +1,27 @@
 import React, { useState, useContext } from "react";
-import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import axiosWithAuth from "./util/axiosWithAuth";
 import { AgentContext } from "../Context/AgentsContext";
 
-const FormContainer = styled.div`
-  border: 2px solid black;
-  margin: 70px auto;
-  width: 23rem;
+const Container = styled.div`
+  padding-top: 50px;
+  height: 80vh;
+  background-color: #a4a71e;
+  .formContainer {
+    border: 2px solid black;
+    width: 23rem;
+    background: white;
+  }
   .formLogo {
     padding: 40px 10px;
-    // background: rgb(250, 170, 91);
     background: gray;
     width: 22.78rem;
     margin: auto;
     color: rgb(120, 200, 133);
   }
   form {
-    // border: 2px solid black;
     margin: auto;
     padding: 20px 10px;
-    // background: white;
     text-align: left;
     width: 23rem;
     color: rgb(145, 143, 143);
@@ -57,9 +58,6 @@ const FormContainer = styled.div`
     cursor: pointer;
   }
 `;
-const OuterContainer = styled.div`
-  height: 80vh;
-`;
 
 function AddPlayer(props) {
   const [values, setValues] = useState({
@@ -67,7 +65,7 @@ function AddPlayer(props) {
     age: "",
     email: "",
   });
-  const [agentsList, setAgentsList] = useContext(AgentContext);
+  const [setAgentsList] = useContext(AgentContext);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -93,8 +91,8 @@ function AddPlayer(props) {
   }
 
   return (
-    <OuterContainer>
-      <FormContainer className="formContainer">
+    <Container>
+      <div className="formContainer">
         <div className="formLogo">
           <h2>Add Player</h2>
         </div>
@@ -133,8 +131,8 @@ function AddPlayer(props) {
           {values.name}
           {values.age}
         </div>
-      </FormContainer>
-    </OuterContainer>
+      </div>
+    </Container>
   );
 }
 
