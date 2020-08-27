@@ -25,23 +25,23 @@ const OuterContainer = styled.div`
 
 export default function MyProfile() {
   return (
-    <OuterContainer>
-      <Container>
-        <div>
-          <img
-            className="managerImg"
-            src="https://www.wellandgood.com/wp-content/uploads/2019/07/GettyImages-1159767394.jpg"
-            alt="Alex morgan"
-          />
-        </div>
-        <div>
-          <p>Alex Morgan</p>
-          <p>Captain</p>
-          <p>Phone number</p>
-          <p>Email</p>
-        </div>
-        <ViewTeamBtn />
-      </Container>
-    </OuterContainer>
+    // <OuterContainer>
+    <Container>
+      <div>
+        <img
+          className="managerImg"
+          src="https://www.wellandgood.com/wp-content/uploads/2019/07/GettyImages-1159767394.jpg"
+          alt="Alex morgan"
+        />
+      </div>
+      <div>
+        <p>Alex Morgan</p>
+        <p>Captain</p>
+        <p>Phone number</p>
+        <p>Email</p>
+      </div>
+      <ViewTeamBtn />
+    </Container>
+    // </OuterContainer>
   );
 }

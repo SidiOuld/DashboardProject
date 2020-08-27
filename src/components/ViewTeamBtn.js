@@ -33,7 +33,7 @@ const BtnContainer = styled.div`
 function ViewTeamBtn() {
   return (
     <BtnContainer>
-      <NavLink className="ViewTeamBtn" to="/support-team">
+      <NavLink className="ViewTeamBtn" to="/players">
         View The Team
       </NavLink>
     </BtnContainer>

@@ -64,7 +64,12 @@ const Container = styled.div`
   }
 `;
 
-function FindMyTeam() {
+function FindMyTeam(props) {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.history.push("/email-confirmation");
+  };
+
   return (
     <Container>
       <div className="box1">
@@ -78,7 +83,7 @@ function FindMyTeam() {
             </b>
           </p>
           <did className="email_status-form">
-            <form>
+            <form onSubmit={handleSubmit}>
               <input type="text" />
               <button type="submit">Submit</button>
             </form>

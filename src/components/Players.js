@@ -34,7 +34,7 @@ const Container = styled.div`
 `;
 
 function Players() {
-  const [agentsList, setAgentsList] = useContext(AgentContext);
+  const [agentsList] = useContext(AgentContext);
 
   return (
     <Container>

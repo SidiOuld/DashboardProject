@@ -15,6 +15,8 @@ import UpdateAgentForm from "./components/UpdateAgentForm";
 import PrivateRoute from "./components/PrivateRoute";
 import { AgentContext, AgentProvider } from "./Context/AgentsContext";
 import FindMyTeam from "./components/FindMyTeam";
+import EmailConfirmationPage from "./components/EmailConfirmationPage";
+import EmailConfirmation from "./components/EmailConfirmationPage";
 
 export default function App() {
   return (
@@ -23,6 +25,13 @@ export default function App() {
       <div>
         <AgentProvider>
           <PrivateRoute exact path="/players" component={Players} />
+        </AgentProvider>
+        <AgentProvider>
+          <PrivateRoute
+            exact
+            path="/email-confirmation"
+            component={EmailConfirmationPage}
+          />
         </AgentProvider>
         <AgentProvider>
           <PrivateRoute
